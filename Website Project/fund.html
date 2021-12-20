@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just do it - SPORTS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    <!--Fonts imported from GOOGLE FONTS-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><!---from google search 'Font awesome 4 CDN' -->
+</head>
+<body>
+<section class="sub-header">
+    <nav>
+    <a href="index.html"><img src="images/logo.png"></a>
+        <div class="nav-links" id="navLinks">                              <!---we've added Javascript for button functions belowlike hideMenu() and showMenu()-->
+            <i class="fa fa-times" onclick="hideMenu()"></i> <!---'Close icon' this is copied from Font Awesome 4 icons which is placed where you need the icon to appear, fyi aria part is removed-->             <!---https://fontawesome.com/v4.7/icon-->
+            <ul>
+                <li><a href="index.html">HOME</a></li>    <!---headers-->
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="participate.html">PARTICIPATE</a></li>
+                <li><a href="fund.html">FUND</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i> <!---second icon placed 'Menu'-->
+</nav>
+<h1>FUND</h1>
+</section>
+
+<!---------FUNDING----------->
+<section class="Fund">
+    <h1>Funding Us</h1>
+    <p>You can fund or donate for the contest through online payment like Esewa or Fonepay. Visiting the ICEYY Office for direct donation can be possible too. Thank you for the support.</p>
+    <div class="row">
+        <div class="fund-col">
+            <img src="images/esewa.jpg">
+            <h2> Esewa </h2>
+            <i class="fa fa-credit-card"></i>
+            <p><br> Our Esewa Id: 100 </p>
+        </div>
+        <div class="fund-col">
+            <img src="images/fonepay.png">
+            <h2> FonePay </h2>
+            <p><br> Our Id: 100 </p>
+            <i class="fa fa-credit-card"></i>
+        </div>
+        <div class="fund-col">
+            <img src="images/icey.jpg">
+            <h2> iceyy </h2>
+            <p><br> Center Building of the College Premises! 3rd Floor Room 069 </p>
+        </div>
+    </div>
+</section>
+
+<!-----Fund Page Form----->
+<div class="form-box">
+    <h3>Fill the form to fund us:</h3>
+    <form class="form-form" action="form-handler-2.php" method="post">
+        <input type="text" placeholder="Enter Name">    <!---placeholder is the text inside the box-->
+        <input type="studentid" placeholder="Enter Student ID">
+        <input type="email" placeholder="Enter Email">
+        <input type="money" placeholder="Enter amount(Rs)">
+        <textarea rows="5" placeholder="Your Message">
+        </textarea>
+        <button type="Submit" class="hero-btn red-btn">Submit Form</button>
+
+    </form>
+</div>
+
+<!------------Footer--------------->
+
+<section class="Footer">
+    <h4>About Us</h4>
+    <p>Organizing Partner: ICEYY<br>Lord Buddha Education Foundation. APU<br>Maitidevi, Kathmandu
+    </p>
+    <div class="icons">
+        <i class="fa fa-facebook-square" ></i>
+        <i class="fa fa-instagram" ></i>
+        <i class="fa fa-youtube-square" ></i>
+    </div>
+    <p>Made with <i class="fa fa-heart"></i> by iceyy </p>
+</section>
+
+</body>
+
+    <!---below JavaScript addition for ToggleMenu -->
+<script>    
+    var navLinks = document.getElementById("navLinks"); 
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    
+    function hideMenu(){
+        navLinks.style.right ="-200px";
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just do it - SPORTS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    <!--Fonts imported from GOOGLE FONTS-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><!---from google search 'Font awesome 4 CDN' -->
+</head>
+<body>
+<section class="sub-header">
+    <nav>
+    <a href="index.html"><img src="images/logo.png"></a>
+        <div class="nav-links" id="navLinks">                              <!---we've added Javascript for button functions belowlike hideMenu() and showMenu()-->
+            <i class="fa fa-times" onclick="hideMenu()"></i> <!---'Close icon' this is copied from Font Awesome 4 icons which is placed where you need the icon to appear, fyi aria part is removed-->             <!---https://fontawesome.com/v4.7/icon-->
+            <ul>
+                <li><a href="index.html">HOME</a></li>    <!---headers-->
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="participate.html">PARTICIPATE</a></li>
+                <li><a href="fund.html">FUND</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i> <!---second icon placed 'Menu'-->
+</nav>
+<h1>FOR ASSISTANCE</h1>
+</section>
+
+<!-----------Contact ---------->
+
+<section class="location">  <!---importing html as embed from maps-->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101627.08591202722!2d-115.87404734454778!3d37.25135082336373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80b81baaba3e8c81%3A0x970427e38e6237ae!2sArea%2051%2C%20NV%2C%20USA!5e0!3m2!1sen!2suk!4v1639228941765!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</section>
+
+<section class="contact-us">
+    <div class="row">
+        <div class="contact-col">
+        <div>
+            <i class="fa fa-home" ></i>
+            <span>
+                <h5>
+                    Area 51, Nevada Road
+                </h5>
+                <p>USA</p>
+            </span>
+        </div>
+        <div>
+            <i class="fa fa-phone"></i>
+            <span>
+                <h5>
+                    +1(100)-6969
+                    <p>Weekdays, 6am to 6pm</p>
+                </h5>
+            </span>
+        </div>
+        <div>
+            <i class="fa fa-envelope"></i>
+            <span>
+                <h5>
+                    2ez4iceyy@protonmail.com
+                </h5>
+                <p>For queries</p>
+            </span>
+        </div>
+    </div>
+    <div class="contact-col"> <!---inside action put php file name along with method to store the infos-->
+        <form action="form-handler.php" method="post">        <!---required makes it compulsory to fill-->
+            <input type="text" name= "name" placeholder="Enter your name" required>
+            <input type="email" name= "email" placeholder="Enter your email address" required>
+            <input type="text" name= "subject"placeholder="Enter your preferred sports" required>
+            <textarea rows="8" name="message" placeholder="Message" required></textarea>
+            <button type="submit" class="hero-btn red-btn">Submit!</button>
+            <!--- name = *** , these *** will be written inside php file's [here ***]-->
+        </form>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<!------------Footer--------------->
+
+<section class="Footer">
+    <h4>About Us</h4>
+    <p>Organizing Partner: ICEYY<br>Lord Buddha Education Foundation, APU<br>Maitidevi, Kathmandu
+    </p>
+    <div class="icons">
+        <i class="fa fa-facebook-square" ></i>
+        <i class="fa fa-instagram" ></i>
+        <i class="fa fa-youtube-square" ></i>
+    </div>
+    <p>Made with <i class="fa fa-heart"></i> by iceyy </p>
+</section>
+
+</body>
+
+    <!---below JavaScript addition for ToggleMenu -->
+<script>    
+    var navLinks = document.getElementById("navLinks"); 
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    
+    function hideMenu(){
+        navLinks.style.right ="-200px";
+    }
+</script>
+
+</body>
+</html>
